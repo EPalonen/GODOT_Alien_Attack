@@ -1,4 +1,8 @@
 extends Area2D
+
+signal enemy_died
+
+
 @export var speed = 200
 @onready var visible_notifier =$VisibleNotifier
 
@@ -19,4 +23,10 @@ func die():
 	
 
 func _on_area_entered(area):
+	die()
+	emit_signal("enemy_died")
+
+
+func _on_body_entered(body):
+	body.take_damage()
 	die()
