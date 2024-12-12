@@ -35,7 +35,6 @@ func player_movement():
 
 
 func shoot():
-	print("shoot")
 	var rocket_instance = rocket_scene.instantiate()
 	#add_child(rocket_instance)
 	rocket_container.add_child(rocket_instance)
