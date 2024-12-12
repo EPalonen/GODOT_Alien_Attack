@@ -13,3 +13,10 @@ func rocket_movement(delta):
 func _on_visible_notifier_screen_exited():
 	print("Enemy has left the building!")
 	queue_free()
+
+func die():
+	queue_free()
+	
+
+func _on_area_entered(area):
+	die()
