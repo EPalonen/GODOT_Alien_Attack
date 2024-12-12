@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ve2wwclhx5vw"]
+[gd_scene load_steps=7 format=3 uid="uid://ve2wwclhx5vw"]
 
 [ext_resource type="Texture2D" uid="uid://1d2nvkldayyr" path="res://assets/textures/bg.png" id="1_4u6p6"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_g00yk"]
 [ext_resource type="PackedScene" uid="uid://b3iajmbpanxmm" path="res://scenes/player.tscn" id="2_nnw75"]
+[ext_resource type="PackedScene" uid="uid://cidpbnb6am6jc" path="res://scenes/hud.tscn" id="2_p0vtr"]
 [ext_resource type="PackedScene" uid="uid://c5r14mvuyt2q6" path="res://scenes/enemy_spawner.tscn" id="3_tg432"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_el6oo"]
@@ -10,6 +11,10 @@ size = Vector2(156, 1160)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_g00yk")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UI" instance=ExtResource("2_p0vtr")]
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = -1.0

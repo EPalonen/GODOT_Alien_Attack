@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6hxhperttmsr"]
+
+[ext_resource type="Script" path="res://scripts/game_over_sxreen.gd" id="1_r5dtl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xaj67"]
+bg_color = Color(0.2, 0.00333333, 0, 0.568627)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_rjmdr"]
+font_size = 64
+font_color = Color(0.0295066, 0.0295066, 0.0295066, 0.992157)
+outline_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ds5mr"]
+font_size = 35
+font_color = Color(0.922083, 0.937016, 0.990577, 0.992157)
+outline_size = 5
+outline_color = Color(0.219521, 0.122932, 0.0910935, 1)
+
+[node name="GameOverSxreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r5dtl")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -341.0
+offset_top = -205.0
+offset_right = 341.0
+offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xaj67")
+
+[node name="GameOver" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -133.0
+offset_right = 167.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_rjmdr")
+
+[node name="Score" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -45.0
+offset_right = 94.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SCORE: 9999
+"
+label_settings = SubResource("LabelSettings_ds5mr")
+
+[node name="RetryButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = 48.0
+offset_right = 83.0
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "RETRY
+"
+
+[connection signal="pressed" from="Panel/RetryButton" to="." method="_on_retry_button_pressed"]
