@@ -16,3 +16,12 @@ func _on_screen_exited():
 	print("Rocket has left the building!")
 	queue_free()
 	
+
+
+func _on_area_entered(area):
+	queue_free()
+	if area.layer == "Enemy": 
+		print("You hit the enemy!")
+		
+		
+	
