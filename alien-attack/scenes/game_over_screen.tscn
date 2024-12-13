@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c6hxhperttmsr"]
 
-[ext_resource type="Script" path="res://scripts/game_over_sxreen.gd" id="1_r5dtl"]
+[ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_r5dtl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xaj67"]
 bg_color = Color(0.2, 0.00333333, 0, 0.568627)

@@ -34,28 +34,28 @@ label_settings = SubResource("LabelSettings_tfwkq")
 
 [node name="LivesTextureRext" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 86.0
-offset_right = 150.0
-offset_bottom = 204.0
+offset_left = 553.0
+offset_top = 666.0
+offset_right = 679.0
+offset_bottom = 784.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_3lcsk")
 
 [node name="X" type="Label" parent="."]
 layout_mode = 0
-offset_left = 86.0
-offset_top = 94.0
-offset_right = 109.0
-offset_bottom = 139.0
+offset_left = 615.0
+offset_top = 674.0
+offset_right = 638.0
+offset_bottom = 719.0
 text = "X"
 label_settings = SubResource("LabelSettings_u60mb")
 
 [node name="LivesLeft" type="Label" parent="."]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 81.0
-offset_right = 152.0
-offset_bottom = 150.0
+offset_left = 641.0
+offset_top = 661.0
+offset_right = 681.0
+offset_bottom = 730.0
 text = "3
 "
 label_settings = SubResource("LabelSettings_0nuim")

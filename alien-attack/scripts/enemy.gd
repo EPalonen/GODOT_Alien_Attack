@@ -13,15 +13,14 @@ func rocket_movement(delta):
 	global_position.x += -speed * delta
 
 
-
 func _on_visible_notifier_screen_exited():
 	print("Enemy has left the building!")
 	queue_free()
 
 func die():
 	queue_free()
+	print("Enemy is dead!")
 	
-
 func _on_area_entered(area):
 	die()
 	emit_signal("enemy_died")
